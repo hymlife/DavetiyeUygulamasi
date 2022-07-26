@@ -1,0 +1,29 @@
+﻿@model DugunDavetiyeUygulamasi.Models.Cevap
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Tesekkurler</title>
+</head>
+<body>
+
+    <h1> Bilgilendirme için teşekkür ederiz @Model.Ad @Model.Soyad</h1>
+    @{
+        if (Model.DuguneGelicekmi == true)
+        {
+            @:Düğüne Katılımınız için teşekkür ederiz
+        }
+        else
+        {
+            @:Problem Değil Başka zamana görüşürüz
+        }
+    }
+
+    <p>Düğüne katılanlar listesini görme için lütfen <a asp-action="CevaplariListele">buraya</a>Tıklayınız</p>
+</body>
+</html>

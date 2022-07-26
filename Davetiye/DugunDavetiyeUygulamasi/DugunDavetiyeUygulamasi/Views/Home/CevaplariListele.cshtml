@@ -1,0 +1,41 @@
+﻿@model IEnumerable<DugunDavetiyeUygulamasi.Models.Cevap>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Düğüne gelenler</title>
+</head>
+<body>
+    <h3>Düğüne gelenler</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Ad</th>
+                <th>Soyad</th>
+                <th>Email</th>
+                <th>Telefon</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(DugunDavetiyeUygulamasi.Models.Cevap x in Model)
+            {
+            <tr>
+                <td>@x.Ad</td>
+                <td>@x.Soyad</td>
+                <td>@x.Email</td>
+                <td>@x.Telefon</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+
+    <p> Ana Menüye Dönmek için <a asp-action="Index">buraya </a>Tıklayınız</p>
+
+</body>
+</html>
